@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="BrainMesh unifies scattered corporate and legal knowledge into an intelligent, searchable system that provides synthesized, actionable answers.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainMesh - Intelligent Knowledge System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --text: #FFFFFF;
+            --secondary: #AAAAAA;
+            --accent: #00FFD1;
+            --problem: #ff4747; /* A subtle red for problem states */
+        }
+        
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+        
+        .glow {
+            text-shadow: 0 0 5px rgba(0, 255, 209, 0.3);
+        }
+        
+        .glow-box {
+            box-shadow: 0 0 10px rgba(0, 255, 209, 0.2);
+        }
+        
+        .hover-glow:hover {
+            text-shadow: 0 0 8px rgba(0, 255, 209, 0.5);
+        }
+        
+        .terminal-line {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .terminal-line:before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+        
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .tab-button {
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab-button.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8">
+    <div class="max-w-7xl mx-auto">
+        <!-- Header Section -->
+        <header class="mb-12 md:mb-20 border-b border-gray-700 pb-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+                <div>
+                    <h1 class="text-3xl md:text-5xl font-bold mb-2">BrainMesh</h1>
+                    <p class="text-secondary text-lg md:text-xl glow">An Intelligent System for Complex Knowledge Domains</p>
+                </div>
+                <!-- CHANGED: Button is now an <a> tag with a mailto link -->
+                <a href="mailto:brainmesh.soham@gmail.com,brainmesh.panda@gmail.com" class="inline-block border border-accent text-accent px-6 py-3 hover:bg-accent hover:bg-opacity-10 transition-all hover-glow">
+                    REQUEST A DEMO
+                </a>
+            </div>
+        </header>
+
+        <!-- General Problem Section -->
+        <section class="mb-16 md:mb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-secondary uppercase tracking-widest mb-6">THE CORE PROBLEM</h2>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-8 glow">FRAGMENTED KNOWLEDGE</h3>
+                    <p class="text-lg leading-relaxed">In any complex environment, knowledge is the most valuable asset, yet it's almost always scattered. For a company, it's trapped in Slack and Confluence. For a legal professional, it's buried in millions of documents. This inability to find context leads to repeated mistakes and wasted hours.</p>
+                </div>
+                <div class="grid-pattern border border-gray-800 p-6 rounded-lg h-64 md:h-full flex items-center justify-center relative glow-box">
+                    <div class="text-5xl font-bold" style="color: var(--problem); text-shadow: 0 0 8px rgba(255, 71, 71, 0.5);">?</div>
+                    <div class="absolute top-6 left-6 border border-gray-700 bg-black p-2 rounded text-sm z-10">Slack</div>
+                    <div class="absolute top-16 right-4 border border-gray-700 bg-black p-2 rounded text-sm z-10">Confluence</div>
+                    <div class="absolute bottom-6 right-6 border border-gray-700 bg-black p-2 rounded text-sm z-10">Email</div>
+                    <div class="absolute bottom-16 left-4 border border-gray-700 bg-black p-2 rounded text-sm z-10">Legal Docs</div>
+                    <svg class="absolute top-0 left-0 w-full h-full opacity-40" viewbox="0 0 100 100" preserveAspectRatio="none">
+                        <path d="M 22 18 Q 50 50, 45 50" stroke="var(--problem)" stroke-width="0.5" fill="none" stroke-dasharray="2,2" />
+                        <path d="M 88 32 Q 50 50, 55 50" stroke="var(--problem)" stroke-width="0.5" fill="none" stroke-dasharray="2,2" />
+                        <path d="M 20 82 Q 50 50, 50 55" stroke="var(--problem)" stroke-width="0.5" fill="none" stroke-dasharray="2,2" />
+                        <path d="M 85 85 Q 50 50, 52 55" stroke="var(--problem)" stroke-width="0.5" fill="none" stroke-dasharray="2,2" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="mb-16 md:mb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                 <div class="grid-pattern border border-gray-800 p-6 rounded-lg h-64 md:h-full flex items-center justify-center relative glow-box">
+                    <div class="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+                        <div class="flex flex-col gap-3">
+                            <div class="border border-gray-700 bg-black py-1 px-2 rounded text-sm">Slack</div>
+                            <div class="border border-gray-700 bg-black py-1 px-2 rounded text-sm">Confluence</div>
+                            <div class="border border-gray-700 bg-black py-1 px-2 rounded text-sm">Legal Docs</div>
+                        </div>
+                        <div class="text-accent text-3xl font-mono px-2">></div>
+                        <div class="border-2 border-accent p-4 rounded-lg glow">
+                            <div class="text-center font-bold">BrainMesh</div>
+                            <div class="text-center text-xs text-secondary">UKG</div>
+                        </div>
+                        <div class="text-accent text-3xl font-mono px-2">></div>
+                        <div class="border border-accent border-opacity-50 bg-black p-3 rounded text-sm text-center">
+                            Synthesized<br>Briefing
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:order-first">
+                    <h2 class="text-secondary uppercase tracking-widest mb-6">OUR SOLUTION</h2>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-8 glow">THE UNIFIED KNOWLEDGE GRAPH</h3>
+                    <p class="text-lg leading-relaxed">BrainMesh goes beyond search. It ingests data from all sources and builds a dynamic cognitive model - a Unified Knowledge Graph (UKG). This graph maps the deep relationships between concepts, giving our AI agent the context to provide synthesized, intelligent answers instead of just a list of links.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section -->
+        <section class="mb-16 md:mb-24">
+             <h2 class="text-secondary uppercase tracking-widest mb-6">DOMAINS WE SERVE</h2>
+            <h3 class="text-2xl md:text-3xl font-bold mb-8 glow">BUILT FOR YOUR DOMAIN</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="border border-gray-800 p-6 rounded-lg glow-box flex flex-col">
+                    <h4 class="text-xl font-bold mb-4">FOR THE CORPORATE ENTERPRISE</h4>
+                    <p class="text-secondary mb-6">Unify knowledge from your internal tools to accelerate projects, onboard new hires, and preserve institutional memory.</p>
+                    <div class="space-y-3 text-sm mt-auto">
+                        <p class="font-bold">Common Questions:</p>
+                        <div class="flex items-start gap-3"><span class="text-accent">></span><p>"What was the rationale for our Q1 pricing change?"</p></div>
+                        <div class="flex items-start gap-3"><span class="text-accent">></span><p>"Who are the subject matter experts for the authentication service?"</p></div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-gray-800 text-sm">
+                        <span class="text-secondary">SOURCES:</span> Slack, Confluence, GitHub, Google Drive, Email
+                    </div>
+                </div>
+                <div class="border border-gray-800 p-6 rounded-lg glow-box flex flex-col">
+                    <h4 class="text-xl font-bold mb-4">FOR LEGAL PROFESSIONALS</h4>
+                    <p class="text-secondary mb-6">Navigate millions of court cases and statutes to find definitive precedent, understand judicial reasoning, and build stronger arguments.</p>
+                     <div class="space-y-3 text-sm mt-auto">
+                        <p class="font-bold">Common Questions:</p>
+                        <div class="flex items-start gap-3"><span class="text-accent">></span><p>"What is the precedent for IP disputes involving AI-generated art?"</p></div>
+                        <div class="flex items-start gap-3"><span class="text-accent">></span><p>"Identify influential judgments by Justice Alok Sharma on contract law."</p></div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-gray-800 text-sm">
+                        <span class="text-secondary">SOURCES:</span> Supreme Court, High Courts, District Courts, Tribunals
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Synthesized Briefings Section -->
+        <section class="mb-16 md:mb-24">
+            <h2 class="text-secondary uppercase tracking-widest mb-6">THE OUTPUT</h2>
+            <h3 class="text-2xl md:text-3xl font-bold mb-8 glow">SYNTHESIZED BRIEFINGS, NOT JUST LINKS</h3>
+            <p class="max-w-4xl mb-10 text-lg">BrainMesh delivers a complete, actionable briefing that synthesizes information into exactly what you need.</p>
+            <div id="briefings-container" class="border border-gray-800 rounded-lg p-4 md:p-6 glow-box">
+                <div class="flex mb-4 border-b border-gray-700">
+                    <button id="tab-corporate" class="tab-button p-4 text-lg active">Corporate Briefing</button>
+                    <button id="tab-legal" class="tab-button p-4 text-lg">Legal Briefing</button>
+                </div>
+                <div id="content-corporate">
+                    <p class="mb-4 text-secondary">Query: "I'm building a new mobile checkout flow; what do I need to know?"</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="border border-gray-700 p-4 rounded bg-black bg-opacity-20"><div class="text-accent mb-2">EXECUTIVE SUMMARY</div><p class="text-sm">Summary of "Project Phoenix" checkout redesign from 2022. Key learning: a 15% drop-off at payment selection due to UI complexity.</p></div>
+                        <div class="border border-gray-700 p-4 rounded bg-black bg-opacity-20"><div class="text-accent mb-2">INTERNAL EXPERTS</div><ul class="text-sm space-y-1"><li>Jane Doe (Lead Engineer)</li><li>John Smith (Product Manager)</li></ul></div>
+                        <div class="col-span-1 md:col-span-2 border border-gray-700 p-4 rounded bg-black bg-opacity-20"><div class="text-accent mb-2">KEY DOCUMENTS</div><ul class="text-sm space-y-1"><li>> [Link] Project Phoenix: Design Spec</li><li>> [Link] Project Phoenix: Post-Launch Retrospective</li></ul></div>
+                    </div>
+                </div>
+                <div id="content-legal" class="hidden">
+                    <p class="mb-4 text-secondary">Query: "Precedent for AI-generated art IP disputes in India?"</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                         <div class="border border-gray-700 p-4 rounded bg-black bg-opacity-20"><div class="text-accent mb-2">LEGAL PRINCIPLES</div><p class="text-sm">No direct SC precedent. Key issue revolves around authorship and originality for non-human creators per The Copyright Act, 1957.</p></div>
+                         <div class="border border-gray-700 p-4 rounded bg-black bg-opacity-20"><div class="text-accent mb-2">KEY AUTHORITIES</div><ul class="text-sm space-y-1"><li>Justice Alok Sharma (Influential Voice)</li><li>The Copyright Act, 1957, Sec 2(d)(vi)</li></ul></div>
+                        <div class="col-span-1 md:col-span-2 border border-gray-700 p-4 rounded bg-black bg-opacity-20"><div class="text-accent mb-2">LANDMARK CASES</div><ul class="text-sm space-y-1"><li>> ABC Corp. v. Union of India (Delhi HC): Discussed copyright originality.</li><li>> PQR v. XYZ (Bombay HC): Touched on "transformative work".</li></ul></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Section -->
+        <section class="mb-16 md:mb-24 text-center">
+            <h2 class="text-secondary uppercase tracking-widest mb-6">PRIVACY BY DESIGN</h2>
+            <h3 class="text-2xl md:text-3xl font-bold mb-8 glow">A SELF-HOSTED ARCHITECTURE</h3>
+            <p class="max-w-4xl text-lg mx-auto">Your data's security is fundamental. We deploy a private, dedicated instance of BrainMesh within your own cloud environment. This ensures your most sensitive data - proprietary plans or confidential case files - never leaves your control.</p>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="mb-16 md:mb-24 text-center">
+            <h2 class="text-2xl md:text-4xl font-bold mb-6 glow">Ready to Build Your Central Brain?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Stop wasting time searching for scattered information. Let's talk about how BrainMesh can create a single source of truth for your domain.</p>
+            <!-- CHANGED: Button is now an <a> tag with a mailto link -->
+            <a href="mailto:brainmesh.soham@gmail.com,brainmesh.panda@gmail.com" class="inline-block border border-accent text-accent px-8 py-4 text-lg hover:bg-accent hover:bg-opacity-10 transition-all hover-glow">
+                SCHEDULE A CONSULTATION
+            </a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-gray-800 pt-8 pb-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-secondary text-sm">
+                    © 2025 BrainMesh.
+                </div>
+                <div class="flex gap-6">
+                    <!-- <a href="#" class="hover:text-accent transition-all">PRIVACY</a>
+                    <a href="#" class="hover:text-accent transition-all">TERMS</a> -->
+                    <!-- CHANGED: Updated the contact link with both emails -->
+                    <a href="mailto:brainmesh.soham@gmail.com,brainmesh.panda@gmail.com" class="hover:text-accent transition-all">CONTACT</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script>
+        // Tab functionality
+        const tabCorporate = document.getElementById('tab-corporate');
+        const tabLegal = document.getElementById('tab-legal');
+        const contentCorporate = document.getElementById('content-corporate');
+        const contentLegal = document.getElementById('content-legal');
+
+        tabCorporate.addEventListener('click', () => {
+            tabCorporate.classList.add('active');
+            tabLegal.classList.remove('active');
+            contentCorporate.classList.remove('hidden');
+            contentLegal.classList.add('hidden');
+        });
+
+        tabLegal.addEventListener('click', () => {
+            tabLegal.classList.add('active');
+            tabCorporate.classList.remove('active');
+            contentLegal.classList.remove('hidden');
+            contentCorporate.classList.add('hidden');
+        });
+
+    </script>
+</body>
+</html>
